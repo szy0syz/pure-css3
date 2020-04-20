@@ -2,7 +2,8 @@
 
 ## Ch1
 
-![01](./assets/Ch1.png)
+![c01](./assets/Ch1-1.png)
+![c02](./assets/Ch1-2.png)
 
 - 杨辉三角的那个第一个和最后一个子元素的确是个 `trick`
 
@@ -10,5 +11,14 @@
 .triangle div span:first-child,
 .triangle div span:last-child {
   background-color: lightcoral;
+}
+```
+
+- 棋盘这个 奇偶子元素有意思
+
+```css
+.chessboard div:nth-child(odd) span:nth-child(even),
+.chessboard div:nth-child(even) span:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 ```

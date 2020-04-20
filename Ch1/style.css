@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  margin-bottom: 50px;
+}
+
 figure {
   margin-left: 10px;
   margin-top: 10px;
@@ -69,7 +73,6 @@ body > figure:not(:first-child) {
   transform: translateY(-100%);
 }
 
-
 /* ------------------------------------ */
 
 .triangle {
@@ -99,3 +102,173 @@ body > figure:not(:first-child) {
 .triangle div span:last-child {
   background-color: lightcoral;
 }
+
+/* ------------------------------------ */
+
+.chessboard {
+  width: 400px;
+  background-color: burlywood;
+  border: 10px solid darkgray;
+}
+
+.chessboard div {
+  display: flex;
+}
+
+.chessboard div span {
+  width: 100px;
+  height: 100px;
+}
+
+.chessboard div:nth-child(odd) span:nth-child(even),
+.chessboard div:nth-child(even) span:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------------------------ */
+
+.word {
+  display: flex;
+}
+
+.word div {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  color: darkgreen;
+  border: 1px dashed;
+  font-size: 35px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.5s 0.4s ease-out;
+}
+
+.word div:hover {
+  background-color: gold;
+  transform: scale(1.5);
+  transition: 0.5s ease-out;
+}
+
+/* ------------------------------------ */
+
+.manifier-wrapper {
+  height: 12em;
+}
+
+.manifier {
+  position: relative;
+  color: dodgerblue;
+  font-size: 11px;
+}
+
+.lens {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 1em solid;
+  border-radius: 50%;
+}
+
+.handle {
+  position: absolute;
+  width: 2em;
+  height: 10em;
+  border-radius: 0 0 1em 1em;
+  left: 10em;
+  top: 10em;
+  transform: rotate(-45deg);
+  transform-origin: top;
+  background-color: currentColor;
+}
+
+/* ------------------------------------ */
+
+.seasons {
+  width: 20em;
+  height: 20em;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.2em;
+}
+
+.seasons div {
+  border: 0.1em solid gray;
+  text-align: center;
+  line-height: 6em;
+  font-size: 1.5em;
+  color: black;
+}
+
+.seasons div:nth-child(3) {
+  order: 4;
+}
+
+.seasons div:nth-child(1) {
+  border-radius: 100% 0 0 0;
+  background-color: lightgreen;
+}
+
+.seasons div:nth-child(2) {
+  border-radius: 0 100% 0 0;
+  background-color: #ff4500;
+}
+
+.seasons div:nth-child(3) {
+  border-radius: 0 0 100% 0;
+  background-color: rgb(255, 215, 0);
+}
+
+.seasons div:nth-child(4) {
+  border-radius: 0 0 0 100%;
+  background-color: hsla(195, 100%, 50%);
+}
+
+/* ------------------------------------ */
+
+.hashtag {
+  width: 10em;
+  height: 10em;
+  position: relative;
+}
+
+.hashtag div {
+  position: absolute;
+}
+
+.hashtag div:nth-child(odd) {
+  width: 20%;
+  height: 100%;
+}
+.hashtag div:nth-child(even) {
+  width: 100%;
+  height: 20%;
+}
+
+.hashtag div:nth-child(1) {
+  left: 10%;
+  background-color: hsl(197, 71%, 73%, 0.8);
+}
+
+.hashtag div:nth-child(2) {
+  top: 10%;
+  background-color: hsl(300, 47%, 75%, 0.8);
+}
+
+.hashtag div:nth-child(3) {
+  right: 10%;
+  background-color: hsl(0, 79%, 72%, 0.8);
+}
+
+.hashtag div:nth-child(4) {
+  bottom: 10%;
+  background-color: hsl(28, 100%, 86%, 0.8);
+}
+
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+
+/* ------------------------------------ */
