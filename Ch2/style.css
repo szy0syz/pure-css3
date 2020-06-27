@@ -110,7 +110,6 @@ figure.err p:nth-child(2)::before {
 }
 /* ---------------------------- */
 
-
 /* ---------------------------- */
 .circle,
 .circle::before,
@@ -140,15 +139,24 @@ figure.err p:nth-child(2)::before {
   color: gold;
 }
 
-.circle::before {
+.circle:nth-child(1)::before {
+  left: 20px;
+}
+.circle:nth-child(1)::after {
+  right: 20px;
+}
+
+.circle:nth-child(2) {
+  margin-left: 50px;
+}
+
+.circle:nth-child(2)::before {
   transform: rotate(120deg);
 }
-.circle::after {
+.circle:nth-child(2)::after {
   transform: rotate(240deg);
 }
 /* ---------------------------- */
-
-
 
 /* ---------------------------- */
 .heart {
@@ -186,7 +194,7 @@ figure.err p:nth-child(2)::before {
 
 .heart:nth-child(1)::before,
 .heart:nth-child(1)::after {
-  transform-origin:none;
+  transform-origin: none;
   transform: none;
 }
 
@@ -195,3 +203,123 @@ figure.err p:nth-child(2)::before {
   background-color: hsla(0, 79%, 72%, 1);
 }
 /* ---------------------------- */
+
+.monster-wrapper {
+  background-color: lightgoldenrodyellow;
+  margin: 0;
+  margin-top: 40px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monster {
+  font-size: 16px;
+  width: 10em;
+  height: 13em;
+  color: lightgreen;
+  background-color: currentColor;
+  border-radius: 5em 5em 5% 5% / 6em 6em 5% 5%;
+  position: relative;
+}
+
+.monster .eye {
+  position: absolute;
+  width: 6.5em;
+  height: 6.5em;
+  background-color: white;
+  border-radius: 50% / 60% 60% 40% 40%;
+  left: calc(50% - (6.5em) / 2);
+  top: 2em;
+  box-shadow: 0.2em 0.9em hsla(0, 0%, 0%, 0.1);
+  background-image: radial-gradient(
+      circle at 50% 25%,
+      white 0.4em,
+      transparent 0.4em
+    ),
+    radial-gradient(circle at 50% 40%, black 1.7em, transparent 1.7em);
+}
+
+.monster .mouth {
+  position: absolute;
+  width: 3em;
+  height: 2.1em;
+  background-color: black;
+  bottom: 1em;
+  left: calc(50% - (3em) / 2);
+  border-radius: 50% 50% 3em 3em;
+  overflow: hidden;
+}
+
+.mouth::before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: 0.6em;
+  background-color: tomato;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.mouth .teeth,
+.mouth .teeth::before,
+.mouth .teeth::after {
+  position: absolute;
+  border-top: 0.8em solid white;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  left: 1.1em;
+}
+
+.mouth .teeth::before,
+.mouth .teeth::after {
+  content: '';
+}
+
+.mouth .teeth::before {
+  left: -1.1em;
+  top: -0.8em;
+}
+.mouth .teeth::after {
+  left: 0.3em;
+  top: -0.8em;
+}
+
+.ear {
+  position: absolute;
+  width: 2.5em;
+  height: 5em;
+  top: -3.5em;
+  transform-origin: bottom;
+}
+
+.ear::before {
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 80%;
+  background-color: currentColor;
+  left: calc(50% - 0.5em);
+  bottom: 0;
+}
+
+.ear::after {
+  content: '';
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: inset -0.3em -0.3em hsla(0, 0%, 0%, 0.1);
+}
+
+.ear.left {
+  left: 1em;
+  transform: rotate(-20deg);
+}
+
+.ear.right {
+  right: 1em;
+  transform: rotate(23deg);
+}
