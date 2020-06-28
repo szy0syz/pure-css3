@@ -26,4 +26,5 @@
 ## Ch2
 
 ![ch02-1](./assets/Ch2-1.png)
+![ch02-steamer](./assets/Ch2-steamer.png)
 ![ch02-monster](./assets/Ch2-monster.png)
