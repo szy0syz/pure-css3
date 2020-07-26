@@ -1,0 +1,73 @@
+body {
+  background-color: lightskyblue;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pencil {
+  width: 50em;
+  height: 3.5em;
+  /* outline: 1px dashed; */
+  display: flex;
+  filter: drop-shadow(0.4em 0.8em 0.3em hsla(0, 0%, 0%, 0.3));
+}
+
+.taper {
+  width: 4em;
+  /* background-color: burlywood; */
+  position: relative;
+}
+
+.taper::before,
+.taper::after {
+  content: '';
+  position: absolute;
+  border-right: 4em solid;
+  border-top: calc(3.5em / 2) solid transparent;
+  border-bottom: calc(3.5em / 2) solid transparent;
+}
+
+.taper::before {
+  border-right-color: burlywood;
+}
+.taper::after {
+  border-right-color: black;
+  transform: scale(0.3);
+  transform-origin: left;
+}
+
+.barrel {
+  width: 40em;
+  background-color: green;
+  border-top: 1em solid forestgreen;
+  border-bottom: 1em solid darkgreen;
+
+  text-align: center;
+  color: silver;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+.eraser {
+  background-color: lightpink;
+  width: 6em;
+  position: relative;
+  border-top: 1em solid pink;
+  border-bottom: 1em solid lightcoral;
+}
+
+.eraser::before {
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: silver;
+  height: 1.5em;
+  border-top: 1em solid lightgray;
+  border-bottom: 1em solid gray;
+  margin-top: -1em;
+}
