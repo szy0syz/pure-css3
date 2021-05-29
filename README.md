@@ -29,7 +29,10 @@
 ![ch02-steamer](./assets/Ch2-steamer.png)
 ![ch02-monster](./assets/Ch2-monster.png)
 
-## Ch05
+## Ch05 阴影
 
 ![ch05-calendar](./assets/ch05-calendar.png)
 ![ch05-window](./assets/Ch05-window.png)
+
+## Ch06 剪切、滤镜和色彩混合
+
