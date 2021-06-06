@@ -69,3 +69,5 @@ background-image: linear-gradient(
 
 - 斜60°分割的画法
 - 可能用calc计算来居中会快点
+
+![eye](./assets/eye.gif)
