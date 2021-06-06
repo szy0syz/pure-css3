@@ -71,3 +71,12 @@ background-image: linear-gradient(
 - 可能用calc计算来居中会快点
 
 ![eye](./assets/eye.gif)
+
+```css
+.eye div:nth-child(1) { --n: 1; }
+.eye div:nth-child(2) { --n: 2; }
+.eye div:nth-child(3) { --n: 3; }
+.eye div:nth-child(4) { --n: 4; }
+```
+
+- 通过预先设置 “坑位”，然后向作用域内注入变量激活坑位
