@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cup</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #444;
+      }
+
+      .cup {
+        --bubble-1: radial-gradient(
+          circle at 35% 40%,
+          lightblue 0.1em,
+          transparent 0.4em
+        );
+
+        --bubble-2: radial-gradient(
+          circle at 65% 60%,
+          lightblue 0.1em,
+          transparent 0.3em
+        );
+
+        --bubble-3: radial-gradient(
+          circle at 45% 80%,
+          lightblue 0.1em,
+          transparent 0.2em
+        );
+
+        --bubbles: var(--bubble-1), var(--bubble-2), var(--bubble-3);
+      }
+
+      .cup {
+        width: 2em;
+        height: 4em;
+        font-size: 40px;
+
+        background:
+          var(--bubbles),
+          linear-gradient(to bottom, lightskyblue 25%, transparent 25%),
+          dodgerblue;
+
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="cup"></figure>
+  </body>
+</html>
