@@ -77,6 +77,9 @@ background-image: linear-gradient(
 .eye div:nth-child(2) { --n: 2; }
 .eye div:nth-child(3) { --n: 3; }
 .eye div:nth-child(4) { --n: 4; }
+
+ --diameter: calc(10em - (var(--n) - 1) * 1em);
 ```
 
 - 通过预先设置 “坑位”，然后向作用域内注入变量激活坑位
+- 通过变量套变量，激活子元素动画
