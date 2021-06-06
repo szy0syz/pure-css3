@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>diamond</title>
+  <style>
+    body,html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .diamond {
+      --color1: deepskyblue;
+      --color2: steelblue;
+      --color3: royalblue;
+      --color4: dodgerblue;
+
+      width: 10em;
+      font-size: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      transform: rotate(45deg);
+    }
+
+    .diamond div {
+      border-width: 5em;
+      border-style: solid;
+      border-color: var(--color1) var(--color2) var(--color3) var(--color4);
+    }
+
+    .diamond div:first-child {
+      border-color: transparent var(--color2) var(--color3) transparent;
+    }
+  </style>
+</head>
+<body>
+  <figure class="diamond">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </figure>
+</body>
+</html>
