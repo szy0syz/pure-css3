@@ -56,3 +56,16 @@
 
 - `css`的变量也是有作用域之分的，从当前开始找直到 `:root` 域，“谁近就用谁”
 - `border-radius: 50% / 30% 60%;`
+
+![004](./assets/004.png)
+
+```css
+background-image: linear-gradient(
+  60deg,
+  lightcoral 50%,
+  lightgreen 50%
+);
+```
+
+- 斜60°分割的画法
+- 可能用calc计算来居中会快点
