@@ -87,3 +87,6 @@ background-image: linear-gradient(
 ### 千纸鹤
 
 ![eye](./assets/cranes.png)
+
+- 通过变量控制 “block” 纸片！
+- 原来 css 里也有 “作用域”，可以分别的顶层下级的作用域分别覆盖变量的值！
